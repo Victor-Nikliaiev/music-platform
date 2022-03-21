@@ -5,6 +5,8 @@ import { FileModule } from './file/file.module';
 import { TrackModule } from './track/track.module';
 import * as path from 'path';
 import { AlbumModule } from './album/album.module';
+import { config } from 'dotenv';
+config();
 
 @Module({
   imports: [
