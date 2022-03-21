@@ -8,9 +8,7 @@ import { AlbumModule } from './album/album.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://arhis:arhis@cluster0.hduwg.mongodb.net/music-app?retryWrites=true&w=majority',
-    ),
+    MongooseModule.forRoot(process.env.MONGO_URI),
     ServeStaticModule.forRoot({
       rootPath: path.resolve(__dirname, 'static'),
     }),
